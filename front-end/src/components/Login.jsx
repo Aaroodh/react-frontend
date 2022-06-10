@@ -12,11 +12,11 @@ const Login = () => {
     const [email, setemail] = useState();
     const [password, setpassword] = useState();
 
-    const loginUser = (event) => {
+    const loginUser = async (event) => {
         event.preventDefault();
 
         //need to develop from backend
-        const res = fetch("/routToPostdata", {
+        const res = await fetch("/routToPostdata", {
             method: "POST",
             headers: {},
             body: JSON.stringify({
