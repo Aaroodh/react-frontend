@@ -8,7 +8,8 @@ import { SocialIcon } from 'react-social-icons';
 
 
 const Login = () => {
-
+    const [email, setemail] = useState();
+    const [password, setpassword] = useState();
     const loginUser = async (event) => {
         event.preventDefault();
 
