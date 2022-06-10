@@ -12,7 +12,20 @@ const Login = () => {
     const [email, setemail] = useState();
     const [password, setpassword] = useState();
 
+    const loginUser = async (event) => {
+        event.preventDefault();
 
+        //need to develop from backend
+        const res = await fetch("/routToPostdata", {
+            method: "POST",
+            headers: {},
+            body: JSON.stringify({
+                email, password
+
+            })
+        })
+        const data = res.json();
+    }
 
     return (<div>
         <section className="vh-100">
